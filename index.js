@@ -289,7 +289,16 @@ for (const char of str4){
 // let n = 7;
 // Example Output:
 // 0 1 1 2 3 5 8
- 
+
+const number1 = 7;
+let n3 = 0, n4 = 1, s1;
+for (let i =1; i<=number1; i++){
+    console.log(n3);
+    s1=n3+n4;
+    n3=n4;
+    n4=s1;
+} 
+
 // Exercise 21
  
 // Find All Divisors Write a loop to find all divisors of a number n.
@@ -297,6 +306,13 @@ for (const char of str4){
 // let n = 28;
 // Example Output:
 // 1 2 4 7 14 28
+
+let n5 = 28;
+for (let i = 1; i<=n5;i++){
+    if (n5%i==0){
+        console.log(i)
+    }
+}
  
 // Exercise 22
  
@@ -305,6 +321,15 @@ for (const char of str4){
 // let str = "radar";
 // Example Output:
 // radar is a palindrome
+ let str6 = "radar";
+ let rev = ""
+ for (let j = (str6.length)-1; j>=0;j--){
+     rev+=str6.charAt(j);
+ }if (rev==str6){
+    console.log(`${str6} is a palindrome`)
+ }else{
+    console.log(`${str6} is not a palindrome`)
+ }
  
 // Exercise 23
  
@@ -331,6 +356,16 @@ for (const char of str5){
 // Example Output:
 // Missing number: 4
  
+let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+let arr2 = [1, 2, 3, 4, 6, 7, 8, 9, 10]
+for (let i = 0; i<= (arr1.length);i++ ){
+    if (arr2[i]!==arr1[i]){
+        console.log(`Missing number:${arr1[i]}`)
+        break
+    }
+}
+
+
 // Exercise 25
  
 // Filter Positive Numbers Write a loop to filter out positive numbers from an array.
@@ -339,6 +374,13 @@ for (const char of str5){
 // Example Output:
 // [5, 9]
  
+let arr3 = [-3, 5, -2, 0, 9, -8]
+for (let i = 0; i<= arr3.length; i++){
+    if (arr3[i]>0){
+        console.log(`[${arr3[i]}]`)
+    }
+}
+
 // Exercise 26
  
 // Create a Pyramid Pattern Write a loop to create the following pyramid pattern.
@@ -350,6 +392,13 @@ for (const char of str5){
 // ***
 // ****
 // *****
+
+for (let i = 0; i < 5; i++) {
+    let output = '';
+    for (let k = 0; k <= i; k++) 
+    output += '*';
+    console.log(output);  
+} 
  
 // Exercise 27
  
@@ -359,6 +408,13 @@ for (const char of str5){
 // Example Output:
 // Sum of digits: 15
  
+let num2 = 12345;
+let num_str= num2.toString()
+let sum1 = 0
+for (let i = 0; i<=num_str.length-1;i++){
+    sum1+=(parseInt(num_str.charAt(i), 10))
+}console.log(sum1)
+
 // Exercise 28
  
 // Remove Duplicates from an Array Write a loop to remove duplicate elements from an array.
@@ -367,6 +423,10 @@ for (const char of str5){
 // Example Output:
 // [1, 2, 3, 4]
  
+let arr4 = [1, 2, 3, 2, 1, 4];
+
+    
+
 // Exercise 29
  
 // Find Second Largest Number Write a loop to find the second largest number in an array.
@@ -375,6 +435,14 @@ for (const char of str5){
 // Example Output:
 // Second largest number: 9
  
+
+let arr5 = [4, 10, 9, 12, 7]
+let max = -Infinity;
+for (let i=0; i<=arr5.length; i++){
+    if (arr5[i]>max){
+        max=arr5[i]
+    }
+}console.info(max)
 // Exercise 30
  
 // Sort an Array Write a loop to sort an array in ascending order without using built-in functions.
@@ -382,7 +450,15 @@ for (const char of str5){
 // let arr = [5, 3, 8, 1, 4];
 // Example Output:
 // [1, 3, 4, 5, 8]
- 
+
+let arr6 = [4, 10, 9, 12, 7]
+let max1 = Infinity;
+for (let i=0; i<=arr5.length; i++){
+    if (arr5[i]<max){
+        max=arr5[i]
+    }
+    console.log(max)
+}
 // Generate a Diamond Pattern Write a loop to create a diamond pattern.
 // Example Output:
 // markdown
@@ -392,3 +468,4 @@ for (const char of str5){
 //  *****
 //   ***
 //    *
+
