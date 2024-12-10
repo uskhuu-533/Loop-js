@@ -237,7 +237,7 @@ for (let i = (str3.length)-1; i>=0; i--){
 let base = 2;
 let exponent = 5;
 let num1 =1
-for (let i =0; i<=exponent; i++){
+for (let i =0; i<exponent; i++){
     num1=num1*base
 }console.log(num1)
 
@@ -394,7 +394,7 @@ for (let i = 0; i<= arr3.length; i++){
 // *****
 
 for (let i = 0; i < 5; i++) {
-    let output = '';
+    let output = "";
     for (let k = 0; k <= i; k++) 
     output += '*';
     console.log(output);  
